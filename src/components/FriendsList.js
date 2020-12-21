@@ -1,30 +1,21 @@
 import React from 'react';
+import Friend from './Friend';
 
-function FriendsList({friends}) {
+function FriendsList({friends, deactivateFriend}) {
 
     return (
       <div>
+        <h1>Friends</h1>
         <ul>
-          {friends.map((friend, index) => (
-            <li key={index}>
-              <div className="friend__container">
-                <div>
-                  <span>{friend}</span>
-                  <img src={`https://i.pravatar.cc/150?img=${index+8}`} alt="avatar" />
-                </div>
-                <div>
-                  <span>
-                    <button>Remove</button>
-                  </span>
-                </div>
-                <div>
-                  <span>
-                    <button>Diactivate</button>
-                  </span>
-                </div>
-              </div>
-            </li>
-          ))}
+          {!friends.length ? (
+            <h3>You currently have no friends</h3>
+          ) : (
+            friends.map((friend, index) => (
+              <span key={index}>
+                <Friend index={index} deactivateFriend={deactivateFriend} friend={friend} />
+              </span>
+            ))
+          )}
         </ul>
       </div>
     );

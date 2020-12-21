@@ -1,7 +1,7 @@
 .app{
   text-align: center;
   width: 80vw;
-  height: 99vh;
+  min-height: 99vh;
   margin: auto;
   /* border: 1px solid red; */
   box-shadow: 0px 10px 13px -7px #000;
@@ -14,31 +14,66 @@
 
 ul{
   list-style-type: none;
+      padding-inline-start: 0px;
 }
 
 ul li{
-  padding: 10px 0;
+  /* padding: 10px 0; */
   margin: 10px 0;
-  border: 1px solid;
+  /* border: 1px solid; */
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
+  
 }
-
+.friend__name{
+  color: #fff;
+}
 .friend__container{
-  border: 1px solid;
+  /* border: 1px solid; */
+  box-shadow: 0px 0px 10px -5px #000;
   display: flex;
   justify-content: space-between;
-  align-self: center;
-  background-color: yellow;
-  width: 20vw;
-  flex: 0.5
+  align-items: center;
+  background-color: #8A20A5;
+  border-radius: 5px;
+}
+.deactivated__friend__container{
+  background-color: #a076aa;
+}
+input{
+  width: 30vw;
+  border:2px solid rgb(138, 32, 165);
+  /* border-radius: 5px; */
 }
 
-ul li div:nth-child(1){
+.remove__btn{
+  color: red;
+}
+
+img{
+  width: 40px;
+  border-radius: 5px;
+}
+
+.friend__container:nth-child(1){
   flex: 1;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  display: flex;
+  /* justify-content:right; */
 }
 
-ul li div:nth-child(2), ul li div:nth-child(3){
+.friend__container:nth-child(1) span{
+  display: block;
+}
+
+.friend__container:nth-child(2), .friend__container:nth-child(3){
   flex: 0.5;
 }
+button{
+  width: 90px;
+  cursor: pointer;
+}
+
+
