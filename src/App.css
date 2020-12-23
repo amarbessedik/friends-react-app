@@ -35,7 +35,7 @@ ul li{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8A20A5;
+  background-color: #eee9f0;
   border-radius: 5px;
 }
 .deactivated__friend__container{
@@ -43,10 +43,25 @@ ul li{
 }
 input{
   width: 30vw;
+  height: 28px;
   border:2px solid rgb(138, 32, 165);
   /* border-radius: 5px; */
 }
 
+form{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+button{
+  width: 90px;
+  cursor: pointer;
+  /* background:rgb(209, 209, 247) */
+}
+.icon{
+  color:rgb(138, 32, 165) !important;
+}
 .remove__btn{
   color: red;
 }
@@ -61,7 +76,6 @@ img{
   padding: 5px 10px;
   border: 2px solid #fff;
   display: flex;
-  /* justify-content:right; */
 }
 
 .friend__container:nth-child(1) span{
@@ -71,9 +85,22 @@ img{
 .friend__container:nth-child(2), .friend__container:nth-child(3){
   flex: 0.5;
 }
-button{
-  width: 90px;
-  cursor: pointer;
+
+.user__profile{
+  box-shadow: 0 0 -4px -5px #333;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 15px;
 }
+
+.user__profile >*{
+  margin: 5px 0;
+  color: rgb(138, 32, 165)
+}
+.user__profile p{
+  font-size: 12px;
+}
+
 
 

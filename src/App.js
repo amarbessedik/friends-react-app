@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import FriendsList from './components/FriendsList';
 import DeactivatedFriendsList from './components/DeactivatedFriendsList';
+// import AddIcon from "@material-ui/icons/Add";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 
 function App() {
   const initialFriendList = ["John", "Malik", "Rebicca"];
@@ -48,7 +50,7 @@ function App() {
         </span>
         <span>
           <button onClick={addFriend} type="submit">
-            Join
+            <PersonAddIcon className='icon'/>
           </button>
         </span>
       </form>
