@@ -1,4 +1,5 @@
 import React from "react";
+import Profile from "./Profile";
 
 function DeactivatedFriendsList({
   deactivatedFriends,
@@ -7,33 +8,34 @@ function DeactivatedFriendsList({
 }) {
   return (
     <div>
-        <h1>Deactivated Friends</h1>
+      <h1>Deactivated Subscribers</h1>
       <ul>
         {!deactivatedFriends.length ? (
           <h3>You currently have no deactivated friends</h3>
         ) : (
-          deactivatedFriends.map((friend, index) => (
+          deactivatedFriends.map((subscriber, index) => (
             <li key={index}>
               <div className="friend__container deactivated__friend__container">
-                <div>
-                  <img
-                    src={`https://i.pravatar.cc/150?img=${index + 8}`}
-                    alt="avatar"
-                  />
-                  <span className="friend__name">{friend}</span>
-                </div>
+                <Profile
+                  name={subscriber}
+                  img={`https://i.pravatar.cc/150?img=${index + 1}`}
+                  date={new Date().toISOString().slice(0, 10)}
+                  status="Unsubscribed on: "
+                />
                 <div>
                   <div>
                     <span>
-                      <button onClick={() => reactivateFriend(friend)}>
+                      <button onClick={() => reactivateFriend(subscriber)}>
                         Reactivate
                       </button>
                     </span>
                   </div>
                   <div>
                     <span>
-                      <button onClick={() => removeDeactivatedFriend(friend)}>
-                        <span className='remove__btn'>Remove</span>
+                      <button
+                        onClick={() => removeDeactivatedFriend(subscriber)}
+                      >
+                        <span className="remove__btn">Remove</span>
                       </button>
                     </span>
                   </div>

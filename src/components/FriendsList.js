@@ -5,7 +5,7 @@ function FriendsList({friends, deactivateFriend}) {
 
     return (
       <div>
-        <h1>Friends</h1>
+        <h1>Subscribers</h1>
         <ul>
           {!friends.length ? (
             <h3>You currently have no friends</h3>

@@ -4,7 +4,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import Profile from './Profile';
 import zIndex from '@material-ui/core/styles/zIndex';
 
-function Friend({index, friend, deactivateFriend }) {
+function Friend({index, subscriber, deactivateFriend }) {
   const [edit, setEdit] = useState(false);
 
   return (
@@ -12,8 +12,8 @@ function Friend({index, friend, deactivateFriend }) {
       <div className="friend__container">
         <Profile
           img={`https://i.pravatar.cc/150?img=${index + 1}`}
-          name={friend}
-          date={`1${index}-${index + 1}-201${index}`}
+          name={subscriber}
+          date={`201${index}-${index + 1}-1${index + 1}`}
         />
         <div>
           {
@@ -26,8 +26,8 @@ function Friend({index, friend, deactivateFriend }) {
                     </button>
                   </span>
                   <span>
-                    <button onClick={() => deactivateFriend(friend)}>
-                      Unfriend
+                    <button onClick={() => deactivateFriend(subscriber)}>
+                      Unsubscribe
                     </button>
                   </span>
                 </span>

@@ -9,7 +9,7 @@ function App() {
   const initialFriendList = ["John", "Malik", "Rebicca"];
   const [friends, setFriends] = useState(initialFriendList);
   const [newFriend, setNewFriend] = useState('');
-  const [deactivatedFriends, setDeactivatedFriends] = useState([]);
+  const [deactivatedFriends, setDeactivatedFriends] = useState(['Krafez']);
 
   const handleChange = (e)=>{
      e.preventDefault();
@@ -43,7 +43,7 @@ function App() {
   }
   return (
     <div className="app">
-      <h1 className="app__title">Friends Management Portal</h1>
+      <h1 className="app__title">Subscribers Management Portal</h1>
       <form onSubmit={(e)=> e.preventDefault()}>
         <span>
           <input onChange={handleChange} type="text" value={newFriend} id="" />
